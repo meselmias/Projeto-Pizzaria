@@ -1,0 +1,23 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div id="modal" title="Modal Basico">
+    
+    <h3>
+        Deseja mesmo Cancelar este pedido?
+    </h3>
+
+    <a href="@Url.Action("Lista","Pedido")" class="btn btn-danger">Cancelar</a>
+    <a href="@Url.Action("Lista","Pedido")" class="btn btn-primary">Fechar</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/themes/base/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/layout.css" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <title>Pizzaria Master</title>
+</head>
+<body>
+   
+       <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="brand" href="@Url.Action("Index", "Home")">Pizzaria Master</a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li><a href="@Url.Action("Lista", "Cliente")">Cliente</a></li>
+                        <li><a href="@Url.Action("Lista", "Pedido")">Pedido</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+    @RenderSection("featured", required: false)
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

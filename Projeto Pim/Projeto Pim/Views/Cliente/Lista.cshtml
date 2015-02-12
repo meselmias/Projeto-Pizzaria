@@ -1,0 +1,198 @@
+﻿@model IEnumerable<Projeto_Pim.Models.Cliente>
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/themes/base/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.mask.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery-1.7.1.intellisense.js"></script>
+    <script src="~/Scripts/jquery-1.7.1.js"></script>
+    <script src="~/Scripts/jquery-1.7.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate-vsdoc.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Scripts/_references.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/knockout-2.1.0.debug.js"></script>
+    <script src="~/Scripts/knockout-2.1.0.js"></script>
+    <script src="~/Scripts/modernizr-2.5.3.js"></script>
+    <script src="~/Scripts/jquery-ui.js"></script>
+    <script src="~/Scripts/jquery-ui.min.js"></script>
+    <link href="~/Content/themes/jquery-ui.css" rel="stylesheet" />
+    <title>Lista</title>
+</head>
+<body>
+    <br/>
+    <br/>
+       <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="brand" href="@Url.Action("Index", "Home")">Pizzaria Master</a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li><a href="@Url.Action("Lista", "Cliente")">Cliente</a></li>
+                        <li><a href="@Url.Action("Lista", "Pedido")">Pedido</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+
+    <div class="container-cliente">
+        <p>
+            <a href="@Url.Action("Cadastrar", "Cliente")" class="btn btn-small btn-success"><i class="icon-ok"></i>Novo Cliente</a>
+
+        </p>
+        <table class="table table-condensed table-bordered table-striped">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cpf)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DataNascimento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Endereco)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cep)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Complemento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Bairro)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PontoReferencia)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Telefone)
+                </th>
+                <th></th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cpf)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DataNascimento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Endereco)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cep)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Complemento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Bairro)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PontoReferencia)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Telefone)
+                    </td>
+                    <td>
+
+                        <a class="btn btn-small btn-warning" href="@Url.Action("Alterar", "Cliente", new { id = item.Id })">
+                            <i class="icon-edit icon-white"></i>Editar</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-small btn-primary" href="@Url.Action("Detalhe", "Cliente", new { id = item.Id })">
+                            <i class="icon-list icon-white"></i>Detalhes</a>
+                    </td>
+                   @* <td>
+                        <a class="btn btn-small btn-danger Excluir" id="@item.Id"><i class="icon-remove icon-white"></i>Excluir</a>
+                    </td>*@
+                </tr>
+        
+            }
+        </table>
+    </div>
+</body>
+</html>
+
+
+@*<script type="text/javascript">
+    $(document).ready(function () {
+        $(".Excluir").click(function () {
+
+            var id = $(this).attr('id');
+
+            $(this).dialog({
+                modal: true,
+                resizable: false,
+                title: "Confirmar",
+                buttons: {
+                    "Excluir": function () {
+                        ExcluiCliente(id, false);
+                    },
+                    "Cancelar": function () {
+                        $(this).dialog("close");
+                    }
+                }
+
+            });
+
+        });
+    });
+
+
+    function ExcluiCliente(id) {
+      
+        $.ajax({
+            url: '@Url.Action("Excluir", "Cliente")',
+            data: { id: id },
+            type: "post",
+            dataType: "json",
+            error: function (xmlHttpRequest, textStatus, errorThrown) {
+                alert(errorThrown + ' - ' + textStatus);
+                alert('erro ');
+            },
+            success: function (data) {
+                
+                if (data.success) {
+                    alert('Excluido com sucesso');
+                } else {
+                    alert('erro ao excluir');
+                }
+
+            }
+        });
+    }
+
+</script>*@

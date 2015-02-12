@@ -1,0 +1,300 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+.bg_total {
+    background: #fff url("~\Images\fundoPizzaria.jpg") top center;
+    margin-top: -10px;
+}
+
+
+#menu1 {
+    height: 52px;
+}
+
+.menu {
+    /*background-color: #DA263E;*/
+    border-radius: 10px;
+    height: 51px;
+    margin-top: 20px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #DA263E;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 51px;
+}
+
+    .menu a {
+        color: rgba(200, 0, 0, 1) !important;
+        padding: 0 10px !important;
+        margin: 10px 0;
+    }
+
+        .menu a selpage {
+            background-color: #2AD1E4;
+            padding: 0 10px !important;
+        }
+
+    .menu li {
+        display: inline;
+        padding: 0 10px;
+        height: 51px;
+    }
+
+.ajuste {
+    width: 148px!important;
+    margin: 0 !important;
+}
+
+.ajuste1 {
+    width: 77px!important;
+    margin-left: 13px!important;
+}
+
+
+.menu a:hover {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.logo {
+    text-align: center;
+}
+
+    .logo img {
+        margin-top: -12px;
+        z-index: 999;
+        position: relative;
+    }
+
+.linha {
+    background: #39237F;
+    height: 8px;
+    width: 100%;
+    position: absolute;
+    margin-top: 200px;
+    z-index: -1;
+}
+
+.banner {
+    margin: 0 0 20px 0 !important;
+}
+
+.banner1 {
+    margin: 0 !important;
+    width: auto !important;
+}
+
+.banner2 {
+    margin: 0 !important;
+    width: auto !important;
+}
+
+.banner img {
+    z-index: 0;
+    position: relative;
+    max-width: none !important;
+    margin: 160px 0 0 0 !important;
+}
+
+.cxcontato {
+    background-color: #05003C;
+    padding: 20px;
+    width: 237px;
+    height: 155px;
+    margin: 20px;
+}
+
+    .cxcontato h1 {
+        color: #FCF70E;
+        font-size: 20px;
+        margin: 0 !important;
+    }
+
+    .cxcontato p {
+        color: #F6047E;
+        text-align: center;
+        font-size: 12px;
+        margin: 0 !important;
+    }
+
+    .cxcontato a {
+        color: #FFF;
+        text-align: center;
+        font-size: 12px;
+        margin: 0 !important;
+    }
+
+    .cxcontato h2 {
+        color: #FCF70E;
+        text-align: center;
+        font-size: 12px;
+        margin: 0 !important;
+        line-height: 15px;
+    }
+
+.selpage {
+    background-color: #2AD1E4;
+    padding: 0 10px !important;
+    width: auto!important;
+    margin-left: 13px!important;
+}
+
+.cx_loja {
+    margin: 160px 0 0 15px;
+    width: 622px;
+    height: auto;
+    box-shadow: 0px 0px 13px #e5e5e5;
+    border-radius: 10px;
+    background: #fff;
+}
+
+    .cx_loja h1 {
+        color: #DA263E;
+        margin: 50px 20px 0;
+    }
+
+    .cx_loja p {
+        margin: 12px;
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .cx_loja img {
+        margin: 10px !important;
+    }
+
+.cx_colecoes {
+    border-radius: 10px;
+    height: auto;
+    width: 900px;
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0px 0px 13px #e5e5e5;
+    margin: 206px 0px 0px 0px;
+}
+
+    .cx_colecoes p {
+        margin: 10px;
+        font-size: 12px;
+    }
+
+.cx_colecoescontato {
+    border-radius: 10px;
+    height: 98px;
+    width: 900px;
+    background: #0CF;
+    padding: 10px;
+    box-shadow: 0px 0px 13px #e5e5e5;
+    margin: 0;
+}
+
+    .cx_colecoescontato h1 {
+        color: #FCF70E;
+        font-size: 20px;
+        margin: 0 !important;
+    }
+
+    .cx_colecoescontato p {
+        color: #F6047E;
+        text-align: left;
+        font-size: 12px;
+        margin: 0 !important;
+    }
+
+    .cx_colecoescontato a {
+        color: #FFF;
+        text-align: center;
+        font-size: 12px;
+        margin: 0 !important;
+    }
+
+    .cx_colecoescontato h2 {
+        color: #FCF70E;
+        text-align: right;
+        font-size: 12px;
+        margin: -110px 0 0 0 !important;
+        line-height: 15px;
+    }
+
+.cx_colecoesImgDireita {
+    margin: -210px 0px 0px;
+}
+
+.cx_amarela {
+    border-radius: 10px;
+    height: auto;
+    width: 200px;
+    background: #FF0;
+    padding: 5px;
+    box-shadow: 2px 2px 5px #333;
+}
+
+    .cx_amarela h1 {
+        font-size: 24px;
+        color: #FFF;
+        text-shadow: 2px 2px 2px #333;
+        margin: 0 !important;
+        text-align: center;
+    }
+
+    .cx_amarela p {
+        font-size: 15px;
+        color: #FFF;
+        text-shadow: 2px 2px 2px #333;
+        text-align: center;
+        margin: 0;
+    }
+
+.cx_galeria img {
+    margin: -14px 0 0 10px !important;
+}
+
+.cx_rosa {
+    border-radius: 10px;
+    height: auto;
+    width: 400px;
+    background: #FF007F;
+    padding: 5px;
+    box-shadow: 2px 2px 5px #333;
+}
+
+    .cx_rosa h1 {
+        font-size: 24px;
+        color: #FFF;
+        text-shadow: 2px 2px 2px #333;
+        margin: 0 !important;
+        text-align: center;
+    }
+
+.novidades {
+    border-radius: 10px;
+    height: auto;
+    width: 900px;
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0px 0px 13px #e5e5e5;
+    margin: 207px -1px 20px !important;
+}
+
+.cx_novidades {
+    height: auto;
+    width: 871px;
+    border-bottom-style: dotted;
+    border-width: thin;
+}
+
+    .cx_novidades img {
+        margin: 20px 0 0 0 !important;
+    }
+
+    .cx_novidades p {
+        margin: 20px 0 0 0 !important;
+        width: 688px;
+        font-size: 12px;
+        line-height: 17px;
+    }
+
+.cx_mapa {
+    margin: -52px 0px 0px !important;
+}
